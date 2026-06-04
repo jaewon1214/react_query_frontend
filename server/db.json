@@ -1,0 +1,168 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "username": "Alice",
+      "password": "1111",
+      "age": 30,
+      "email": "alice@example.com",
+      "city": "New York"
+    },
+    {
+      "id": "2",
+      "username": "Bob",
+      "password": "1111",
+      "age": 25,
+      "email": "bob@example.com",
+      "city": "Los Angeles"
+    },
+    {
+      "id": "3",
+      "username": "Charlie",
+      "password": "1111",
+      "age": 35,
+      "email": "charlie@example.com",
+      "city": "Chicago"
+    },
+    {
+      "id": "4",
+      "username": "David",
+      "password": "1111",
+      "age": 28,
+      "email": "david@example.com",
+      "city": "Houston"
+    },
+    {
+      "id": "5",
+      "username": "Eve",
+      "password": "1111",
+      "age": 22,
+      "email": "eve@example.com",
+      "city": "Phoenix"
+    },
+    {
+      "id": "6",
+      "username": "Jona",
+      "password": "1111",
+      "age": 40,
+      "email": "jona@example.com",
+      "city": "Philadelphia"
+    },
+    {
+      "id": "7",
+      "username": "Kim",
+      "password": "1111",
+      "age": 31,
+      "email": "kim@example.com",
+      "city": "San Antonio"
+    },
+    {
+      "id": "2VaLgMT5jro",
+      "username": "john",
+      "password": "1111",
+      "confirmpassword": "1111",
+      "age": "112",
+      "email": "exex@1111",
+      "city": "1wqe"
+    },
+    {
+      "username": "이순신",
+      "password": "1111",
+      "age": "45",
+      "email": "viver4454@gmail.com",
+      "city": "hankuk",
+      "id": "eQ1iMh7W9Vw"
+    }
+  ],
+  "employees": [
+    {
+      "id": "4",
+      "name": "sue123wqe",
+      "email": "Sue4454@example.com",
+      "job": "ai",
+      "pay": 603
+    },
+    {
+      "name": "이순신123",
+      "email": "exex@1111",
+      "job": "db",
+      "pay": "1111",
+      "id": "0vu4oeV2XcU"
+    },
+    {
+      "name": "john",
+      "email": "joh@ga213",
+      "job": "db",
+      "pay": "1111",
+      "id": "yITwOV9Gzv4"
+    }
+  ],
+  "todos": [
+    {
+      "subject": "asd",
+      "checked": true,
+      "id": "yG968Ru_ypE"
+    },
+    {
+      "subject": "ㅁ",
+      "checked": true,
+      "id": "fNiWRQT4RMk"
+    }
+  ],
+  "products": [
+    {
+      "id": "5",
+      "product_name": "스마트폰 거치대 5",
+      "color": "Pink",
+      "cost_price": 47723,
+      "sale_price": 76606,
+      "category_code": "E4"
+    },
+    {
+      "id": "6",
+      "product_name": "태블릿 케이스 6",
+      "color": "Red",
+      "cost_price": 29711,
+      "sale_price": 70400,
+      "category_code": "E6"
+    },
+    {
+      "id": "7",
+      "product_name": "고속충전 케이블 7",
+      "color": "Blue",
+      "cost_price": 17246,
+      "sale_price": 25732,
+      "category_code": "E2"
+    }
+  ],
+  "sales": [
+    {
+      "id": "1",
+      "user_id": 79,
+      "product_id": 68,
+      "quantity": 5,
+      "discount_rate": 0.1,
+      "total_price": 86445,
+      "created_at": "2026-04-24"
+    },
+    {
+      "id": "2",
+      "user_id": 58,
+      "product_id": 93,
+      "quantity": 5,
+      "discount_rate": 0.15,
+      "total_price": 402173,
+      "created_at": "2026-05-21"
+    },
+    {
+      "id": "3",
+      "user_id": 97,
+      "product_id": 21,
+      "quantity": 4,
+      "discount_rate": 0.15,
+      "total_price": 167269,
+      "created_at": "2026-03-08"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
