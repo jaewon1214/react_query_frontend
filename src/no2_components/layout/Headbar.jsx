@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom'
 import { getCurrentUser, useLogout } from '../../no3_store/hooks/uesUser'
+import LoginFormModal from '../user/LoginFormModal'
+import { useState } from 'react'
+import RegisterFormModal from '../user/RegisterFormModal'
 
 const Header = styled.header`
   height: 60px;
@@ -68,6 +71,9 @@ const LogoutButton = styled(Button)`
 const Headbar = () => {
   const navigate = useNavigate();
   const user = getCurrentUser();
+
+  const [loginOpen, setloginOpen] = useState(false);
+  const [registerOpen, setRegisterOpen] = useState(false)
   const handleLogout = () => {
     useLogout()
     alert("로그아웃 되었습니다.")
@@ -75,39 +81,45 @@ const Headbar = () => {
   }
 
   return (
-    <Header>
+    <>
+      <Header>
+        <Logo onClick={() => navigate("/")}>
+          Logo
+        </Logo>
+        <ButtonBox>
+          {user ? (
+            <>
+              <UserText>
+              {user.username} 안녕 
+              </UserText>
 
-      <Logo onClick={() => navigate("/")}>
-        Logo
-      </Logo>
+              <LogoutButton onClick={handleLogout}>
+                로그아웃
+              </LogoutButton>
+            </>
+          ) : (
+            <>
+              <Button onClick={() => setloginOpen(true)}>
+                로그인
+              </Button>
 
-      <ButtonBox>
-
-        {user ? (
-          <>
-            <UserText>
-             {user.username} 안녕 
-            </UserText>
-
-            <LogoutButton onClick={handleLogout}>
-              로그아웃
-            </LogoutButton>
-          </>
-        ) : (
-          <>
-            <Button onClick={() => navigate("/login")}>
-              로그인
-            </Button>
-
-            <Button onClick={() => navigate("/register")}>
-              회원가입
-            </Button>
-          </>
-        )}
-
-      </ButtonBox>
-
-    </Header>
+              <Button onClick={() => setRegisterOpen(true)}>
+                회원가입
+              </Button>
+            </>
+          )}
+        </ButtonBox>
+      </Header>
+      <LoginFormModal
+        open={loginOpen}
+        setOpen={setloginOpen}
+      />
+      <RegisterFormModal
+        open={registerOpen}
+        setOpen={setRegisterOpen}
+      />
+    </>
+    
   )
 }
 

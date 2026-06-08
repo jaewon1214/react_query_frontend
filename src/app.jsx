@@ -5,13 +5,15 @@ import HomePage from './no1_pages/Homepage'
 import EmployeePage from './no1_pages/EmployeePage'
 import Headbar from './no2_components/layout/Headbar'
 import Sidebar from './no2_components/layout/Sidebar'
-import LoginPage from './no1_pages/user/LoginPage'
-import RegisterPage from './no1_pages/user/RegisterPage'
 import { useState } from 'react'
 //import { Provider } from 'react-redux'
 import store from './no3_store'
 import { QueryClient,QueryClientProvider } from '@tanstack/react-query'
-
+import Productpage from './no1_pages/slase/Productpage'
+import 'ag-grid-community/styles/ag-grid.css'
+import 'ag-grid-community/styles/ag-theme-alpine.css'
+import { ModuleRegistry, AllCommunityModule } from 'ag-grid-community'
+ModuleRegistry.registerModules([AllCommunityModule])
 
 
 const Layout = styled.div`
@@ -42,18 +44,15 @@ export function App() {
           <Sidebar />
           <Content> 
             <Routes>
-              <Route path="/register" element={<
-                RegisterPage/>
-              }/>
-              <Route path="/login" element={<
-                LoginPage/>
-              }/>
               <Route path="/" element={<HomePage/>}/>
               <Route path="/todo" element={
                 <TodoPage/>
               }/>
               <Route path="/employee" element={
                 <EmployeePage/>
+              }/>
+              <Route path="/product" element={
+                <Productpage/>
               }/>
             </Routes>
           </Content>

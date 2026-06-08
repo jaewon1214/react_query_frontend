@@ -82,6 +82,7 @@ const Sidebar = () => {
         <MenuLink to="/">Home</MenuLink>
         <MenuLink to="/todo">할일</MenuLink>
         <MenuLink to="/employee">고용인 정보</MenuLink>
+        <MenuLink to="/product">상품 정보</MenuLink>
       </Side>
     </Wrapper>
   )
