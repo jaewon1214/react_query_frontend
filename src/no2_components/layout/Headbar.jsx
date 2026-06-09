@@ -90,7 +90,7 @@ const Headbar = () => {
           {user ? (
             <>
               <UserText>
-              {user.username} 안녕 
+              {user.name} 안녕 
               </UserText>
 
               <LogoutButton onClick={handleLogout}>

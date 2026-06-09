@@ -31,6 +31,7 @@ delete : url/id => return : id
 antd & agird library : npm install antd ag-grid-react ag-grid-community
 
 
-
-
-
+foreach함수 => []foreach((item,idx,copy)=>{})
+map함수 => []map((item,idx,copy)=>{})
+filter => []filter((item,idx,copy)=>{})
+reduce => []reduce((resnlt,item,idx,copy)=>{},초기값)

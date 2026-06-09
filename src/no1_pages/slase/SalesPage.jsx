@@ -1,9 +1,9 @@
 import React from 'react'
-import ProductTable from '../../no2_components/slase/ProductTable'
+import SalesTable from '../../no2_components/slase/SalesTable'
 import { getCurrentUser } from '../../no3_store/hooks/uesUser'
-import AuthControler from '../../no2_components/layout/AuthControler'
+import AuthControler from '../../no2_components/layout/AuthControler';
 
-const Productpage = () => {
+const SalesPage = () => {
   const user = getCurrentUser();
   if(!user){
     return(
@@ -12,12 +12,11 @@ const Productpage = () => {
       />
     )
   }
-
   return (
     <div>
-      <ProductTable/>
+      <SalesTable/>
     </div>
   )
 }
 
-export default Productpage
+export default SalesPage

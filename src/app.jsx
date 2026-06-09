@@ -13,6 +13,7 @@ import Productpage from './no1_pages/slase/Productpage'
 import 'ag-grid-community/styles/ag-grid.css'
 import 'ag-grid-community/styles/ag-theme-alpine.css'
 import { ModuleRegistry, AllCommunityModule } from 'ag-grid-community'
+import SalesPage from './no1_pages/slase/SalesPage'
 ModuleRegistry.registerModules([AllCommunityModule])
 
 
@@ -53,6 +54,9 @@ export function App() {
               }/>
               <Route path="/product" element={
                 <Productpage/>
+              }/>
+              <Route path="/sales" element={
+                <SalesPage/>
               }/>
             </Routes>
           </Content>
