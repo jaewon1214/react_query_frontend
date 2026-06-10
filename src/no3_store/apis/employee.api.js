@@ -1,0 +1,48 @@
+import axios from "axios";
+
+
+
+export const employeeAllGetapi = async () =>{
+    try{
+        const response = await axios.get("http://localhost:3001/employees");
+        return response.data
+    }catch(error){
+        return new Error(error);
+    }
+}
+
+export const employeeGetapi = async (id) =>{
+    try{
+        const response = await axios.get(`http://localhost:3001/employees/${id}`);
+        return response.data
+    }catch(error){
+        return new Error(error);
+    }
+}
+
+export const employeePostApi = async (dataObj) =>{
+    try{
+        const response = await axios.post("http://localhost:3001/employees", dataObj);
+        return response.data
+    }catch(error){
+        return new Error(error);
+    }
+}
+
+export const employeePutApi = async (dataObj) =>{
+    try{
+        const response = await axios.put(`http://localhost:3001/employees/${dataObj.id}`, dataObj);
+        return response.data
+    }catch(error){
+        return new Error(error);
+    }
+}
+
+export const employeeDeleteApi = async (id) =>{
+    try{
+        await axios.delete(`http://localhost:3001/employees/${id}`);
+        return id;
+    }catch(error){
+        return new Error(error);
+    }
+}
